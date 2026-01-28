@@ -295,7 +295,7 @@ This project is licensed under the MIT License.
 
 ## 👥 Authors
 
-- Development Team
+- Arda Ege Tunç
 
 ## 🙏 Acknowledgments
 
@@ -304,9 +304,7 @@ This project is licensed under the MIT License.
 - React team for the amazing framework
 - Tailwind CSS for beautiful styling
 
-## 📞 Support
 
-For support, email support@peygwen.com or open an issue in the repository.
 
 ---
 
