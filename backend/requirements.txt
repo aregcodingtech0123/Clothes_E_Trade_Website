@@ -1,0 +1,56 @@
+# Backend Dependencies for Peygwen E-commerce Platform
+# Node.js/TypeScript Backend Requirements
+
+# Core Dependencies
+express@^5.1.0                    # Web framework for Node.js
+@prisma/client@^6.8.2              # Prisma ORM client for database access
+prisma@^6.8.2                      # Prisma CLI for migrations and schema management
+typescript@^5.8.3                 # TypeScript compiler for type-safe JavaScript
+ts-node@^10.9.2                    # TypeScript execution environment for Node.js
+
+# Authentication & Security
+jsonwebtoken@^9.0.2                # JWT token generation and verification
+bcryptjs@^3.0.2                    # Password hashing library (bcrypt implementation)
+@types/bcryptjs@^2.4.6             # TypeScript type definitions for bcryptjs
+@types/jsonwebtoken@^9.0.9         # TypeScript type definitions for jsonwebtoken
+
+# HTTP & CORS
+cors@^2.8.5                        # Cross-Origin Resource Sharing middleware
+@types/cors@^2.8.18                # TypeScript type definitions for cors
+
+# Environment Configuration
+dotenv@^16.5.0                      # Environment variable management
+
+# Express Type Definitions
+@types/express@^5.0.1               # TypeScript type definitions for Express
+@types/node@^22.15.17              # TypeScript type definitions for Node.js
+
+# Development Dependencies
+# Note: These are typically installed as devDependencies in package.json
+# but listed here for reference
+
+# react-toastify@^11.0.5           # Notification library (if used in backend)
+# Note: react-toastify is typically frontend-only, but may be listed if shared
+
+# Database
+# PostgreSQL database is required (install separately)
+# Connection string format: postgresql://user:password@host:port/database
+
+# Optional Dependencies
+# For production deployments, consider adding:
+# - pm2 (process manager)
+# - helmet (security headers)
+# - express-rate-limit (rate limiting)
+# - compression (response compression)
+
+# Installation Instructions:
+# 1. Ensure Node.js (v18+) and npm are installed
+# 2. Run: npm install
+# 3. Configure .env file with DATABASE_URL and JWT_SECRET
+# 4. Run: npx prisma generate
+# 5. Run: npx prisma migrate dev
+# 6. Start server: npm run dev
+
+# Production Build:
+# npm run build
+# npm start

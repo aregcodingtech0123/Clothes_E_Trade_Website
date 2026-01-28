@@ -1,0 +1,141 @@
+/* Light mode (default) - Black/Near-Black Text */
+:root {
+  --bg-primary: #ffffff;
+  --bg-secondary: #f9fafb;
+  --text-primary: #000000;
+  --text-secondary: #1f2937;
+  --text-tertiary: #374151;
+  --border-color: #e5e7eb;
+  --accent-color: #f59e0b;
+}
+
+/* Dark mode - White/Near-White Text */
+.dark {
+  --bg-primary: #111827;
+  --bg-secondary: #1f2937;
+  --text-primary: #ffffff;
+  --text-secondary: #f3f4f6;
+  --text-tertiary: #e5e7eb;
+  --border-color: #374151;
+  --accent-color: #f59e0b;
+}
+
+/* Base body styles - ensures all text uses theme colors */
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Ensure all text elements inherit theme colors */
+* {
+  color: inherit;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+/* Dark mode utility classes - Force text colors */
+.dark {
+  color: var(--text-primary) !important;
+}
+
+.dark * {
+  color: var(--text-primary) !important;
+}
+
+.dark h1, .dark h2, .dark h3, .dark h4, .dark h5, .dark h6,
+.dark p, .dark span, .dark div, .dark a, .dark button, .dark label,
+.dark input, .dark textarea, .dark select, .dark li, .dark td, .dark th {
+  color: var(--text-primary) !important;
+}
+
+.dark .text-gray-500, .dark .text-gray-600, .dark .text-gray-700, .dark .text-gray-800, .dark .text-gray-900 {
+  color: var(--text-secondary) !important;
+}
+
+/* Light mode - Force black/near-black text */
+:root h1, :root h2, :root h3, :root h4, :root h5, :root h6,
+:root p, :root span, :root div, :root a, :root button, :root label,
+:root input, :root textarea, :root select, :root li, :root td, :root th {
+  color: var(--text-primary) !important;
+}
+
+:root .text-gray-500, :root .text-gray-600, :root .text-gray-700, :root .text-gray-800, :root .text-gray-900 {
+  color: var(--text-secondary) !important;
+}
+
+/* Background color overrides */
+.dark .bg-white {
+  background-color: var(--bg-secondary) !important;
+}
+
+.dark .bg-gray-100,
+.dark .bg-gray-50 {
+  background-color: var(--bg-secondary) !important;
+}
+
+.dark .border-gray-200,
+.dark .border-gray-300 {
+  border-color: var(--border-color) !important;
+}
+
+/* Specific component overrides for dark mode */
+.dark nav,
+.dark footer,
+.dark .navbar,
+.dark .footer {
+  color: var(--text-primary) !important;
+}
+
+.dark nav *, .dark footer *, .dark .navbar *, .dark .footer * {
+  color: var(--text-primary) !important;
+}
+
+/* Hero section - Always white text regardless of theme */
+.hero-section,
+.hero-section * {
+  color: #ffffff !important;
+}
+
+.hero-section h1,
+.hero-section h2,
+.hero-section p,
+.hero-section a,
+.hero-section button,
+.hero-section span {
+  color: #ffffff !important;
+}
+
+/* Exception for amber accent in hero section */
+.hero-section h2 {
+  color: #f59e0b !important;
+}
+
+/* Ensure hero section links maintain white text */
+.hero-section a {
+  color: #ffffff !important;
+}
+
+.hero-section a:hover {
+  color: #ffffff !important;
+}
+
+/* Mobile menu in hero section */
+.hero-section .md\\:hidden a,
+header .md\\:hidden a {
+  color: #ffffff !important;
+}
+
+/* Utility: force text to remain white regardless of theme overrides */
+.force-white-text {
+  color: #ffffff !important;
+}
